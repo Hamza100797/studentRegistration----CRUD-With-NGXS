@@ -1,0 +1,66 @@
+<div class="modal-body row">
+  <div class="col-sm-12 col-md-12 col-lg-3" id="userImage">
+    <div class="avatar-upload" style="padding-left: 2.5rem">
+      <div class="avatar-edit">
+        <div class="avatar-preview">
+          <div id="imagePreview pl-2">
+            <img [src]="" alt="" />
+            <div class="imageUpload"><i class="fas fa-camera"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-1"></div>
+  <div
+    class="col-sm-12 col-md-12 col-lg-8"
+    style="padding-left: 30px"
+    id="userDetails"
+  >
+    <form action="" [formGroup]="studentForm">
+      <div class="formgroup">
+        <div class="row">
+          <label for="">First Name</label>
+          <input
+            type="text"
+            name=""
+            class="form-control"
+            id=""
+            formControlName="firstName"
+            placeholder="Enter Your First Name"
+          />
+        </div>
+        <div class="row">
+          <label for="Last Name"></label>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter Your Last Name"
+            formControlName="lastName"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <label for="Email"></label>
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Enter Email"
+            formControlName="lastName"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div style="text-align: right">
+        <button
+          type="submit"
+          class="btn app-btn-primary theme-btn mx-auto py-2 px-4"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
