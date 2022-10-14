@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-material-components/file-input": "^8.0.0",
     "@angular/animations": "^14.0.0",
     "@angular/cdk": "^14.0.4",
     "@angular/common": "^14.0.0",
@@ -20,9 +21,12 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@ngxs/logger-plugin": "^3.7.4-dev.master-2826e05",
     "@ngxs/store": "^3.7.4",
+    "@popperjs/core": "^2.11.5",
     "angular-bootstrap": "^0.12.2",
+    "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

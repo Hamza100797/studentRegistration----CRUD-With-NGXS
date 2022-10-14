@@ -1,0 +1,52 @@
+
+#userImage{
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: rgb(183 113 113 / 15%);
+  box-shadow: 0 8px 22px 0 rgb(31 45 153 / 37%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+.avatar-upload {
+  padding-left: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  padding-top: 0px;
+  position: relative;
+  top: -9px;
+}
+}
+
+
+.heading  {
+
+  h1 {
+    display: inline;
+  }
+  .close-model {
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+  :hover {
+    opacity: 1;
+    cursor:pointer;
+    // background-color: rgb(78, 22, 207);
+    color: black;
+  }
+
+}
+

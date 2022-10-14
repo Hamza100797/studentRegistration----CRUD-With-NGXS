@@ -1,12 +1,15 @@
 import {
   Component,
   EventEmitter,
+  Inject,
   Input,
   OnInit,
   Output,
   SimpleChange,
 } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Data } from 'popper.js';
 
 @Component({
   selector: 'app-model-pop',
@@ -14,16 +17,24 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./model-pop.component.scss'],
 })
 export class ModelPopComponent implements OnInit {
-  @Output() modalChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @Input() editUserData: any;
   hasFormErrors: boolean = false;
   submitted: boolean = false;
-  constructor() {}
+  constructor(
+    public dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: { heading: string }
+  ) {}
+  editUserData: any = this.data.heading;
+  ngOnInit(): void {
+    console.log(this.editUserData);
+  }
 
-  ngOnInit(): void {}
   ngOnChanges(changes: SimpleChange) {
+    console.log(this.editUserData);
+    debugger;
     if (changes) {
       if (this.editUserData) {
+        console.log(this.editUserData);
+        console.log(this.editUserData);
         this.studentForm.patchValue(this.editUserData);
       }
     }
@@ -44,7 +55,10 @@ export class ModelPopComponent implements OnInit {
   hasError(controlName: string, errorName: string): boolean {
     return this.studentForm.controls[controlName].hasError(errorName);
   }
+  
+onDelete() {
 
+}
   onSubmit(): void {
     this.hasFormErrors = false;
     if (this.studentForm.invalid) {
@@ -60,5 +74,10 @@ export class ModelPopComponent implements OnInit {
     // update Activity
 
     //Create Activity
+  }
+  onNoClick(): void {
+    debugger;
+    this.dialog.closeAll();
+    this.data.heading = '';
   }
 }
